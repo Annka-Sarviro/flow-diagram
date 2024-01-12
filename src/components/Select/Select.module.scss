@@ -1,0 +1,62 @@
+.select_container {
+  display: block;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.select_container.open {
+  .selected_value {
+    &::after {
+      width: 40px;
+      transform: rotate(180deg);
+    }
+  }
+}
+.selected_value {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 0.658px solid #479f76;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #37352f;
+  cursor: pointer;
+
+  &::after {
+    content: url('../../assets/arrow.svg');
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s linear;
+    display: inline-block;
+  }
+}
+
+.selected_value.isOpen::after {
+  transform: rotate(180deg);
+}
+
+.select_list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0;
+}
+
+.select_item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eaf2ff;
+  color: #37352f;
+
+  input {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,24 @@
+.node_container {
+  box-sizing: border-box;
+  display: block;
+  width: 241px;
+  min-height: 141px;
+  background-color: #d1e7dd;
+  border-radius: 4px;
+  padding: 19px 4px 6px;
+}
+
+.node_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.node_textarea {
+  height: 72px;
+  resize: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #fff;
+  border: none;
+}
